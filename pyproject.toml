@@ -1,0 +1,23 @@
+[project]
+name = "yt-cc-capture"
+version = "0.1.0"
+description = "YouTube Closed Captions Capture"
+authors = [
+    {name = "Eugene Odeluga",email = "eodeluga@users.noreply.github.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">3.8,<=3.12.3"
+dependencies = [
+    "youtube-transcript-api (>=1.2.2,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "yt_cc_capture", from = "src"}]
+
+[tool.poetry.scripts]
+yt-cc-capture = "yt_cc_capture.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
