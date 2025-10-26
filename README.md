@@ -43,5 +43,4 @@ yt-cc-capture/
 ```
 
 ## License
-
 MIT © Eugene Odeluga
