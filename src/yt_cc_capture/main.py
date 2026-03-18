@@ -4,6 +4,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from pathlib import Path
 
 def main():
+  print('Starting!')
   parser = argparse.ArgumentParser(description='Downloads closed captions from YouTube videos as transcripts')
   parser.add_argument('--video-id', type=str, required=True, help='YouTube video id')
   parser.add_argument('--out-dir', type=str, required=False, help='Transcript text file output directory')
@@ -33,4 +34,6 @@ def main():
       f.write(full_text)
   except Exception as e:
     print(f'Error: {e}')
+    
+main()
 
